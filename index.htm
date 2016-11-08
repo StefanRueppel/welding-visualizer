@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Welding Visualizer</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script
 			  src="https://code.jquery.com/jquery-2.1.4.js"
 			  integrity="sha256-siFczlgw4jULnUICcdm9gjQPZkw/YPDqhQ9+nAOScE4="
@@ -11,8 +12,15 @@
 	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.css">
 </head>
 <body>
-	<div data-role="header" data-position="fixed">
-	<h1>Welding Visualizer</h1>
+	<div data-role="page" class="ui-responsive-panel">
+		<div data-role="panel" id="menupanel">
+			<!-- panel content goes here -->
+		</div><!-- /panel -->
+		<div data-role="header" data-position="fixed">
+		<a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
+        <!--<a href="#add-form" data-icon="gear" data-iconpos="notext">Add</a>-->
+		<h1>Welding Visualizer</h1>
+		</div>
 	</div>
 </body>
 </html>
