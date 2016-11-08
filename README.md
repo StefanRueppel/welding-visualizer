@@ -4,5 +4,5 @@ Projekt-Repository für das Fach ITSuITP
 ---------------------------------------
 ## Verwendete Programme und Bibliotheken
 ###Frontend
-jQuery Mobile
-d3.js
+* jQuery Mobile
+* d3.js
