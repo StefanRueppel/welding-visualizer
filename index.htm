@@ -3,16 +3,18 @@
 <head>
 	<title>Welding Visualizer</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.css">
 	<script
 			  src="https://code.jquery.com/jquery-2.1.4.js"
 			  integrity="sha256-siFczlgw4jULnUICcdm9gjQPZkw/YPDqhQ9+nAOScE4="
 			  crossorigin="anonymous"></script>
 	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.js"></script>
 	<script src="https://d3js.org/d3.v4.min.js"></script>
-	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.css">
 </head>
 <body>
 	<div data-role="page" class="ui-responsive-panel" id="home">
+		<!--
 		<div data-role="panel" id="nav-panel">
 			<ul data-role="listview">
 			<li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li>
@@ -21,21 +23,32 @@
 			</ul>
 		</div><!-- /panel -->
 		<div data-role="header" data-position="fixed">
-			<a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>
-	        <!--<a href="#add-form" data-icon="gear" data-iconpos="notext">Add</a>-->
+			<!--<a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>-->
+			<!--
+			<a id="btn-back" href="<?php echo $_SERVER['HTTP_REFERER'];?>" data-icon="back" data-rel="back">Back</a>-->
+
 			<h1>Welding Visualizer</h1>
 		</div>
-		<div data-role="ui-content">
-			<span>Content goes here</span>
+		<div data-role="content">
+			<div id="graph-area">
+				<svg width="100%">
+
+				</svg>
+			</div>
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<h1>Ein Projekt der Fachhochschule Südwestfalen Meschede im Fach IT-Systeme und IT-Projekte</h1>
 		</div>
 	</div>
+	<!--
 	<div data-role="page" id="settings">
 		<div data-role="header" data-position="fixed">
 			<h1>Settings</h1>
 		</div>
-		<div data-role="ui-content">
+		<div data-role="content">
 			<span>Settings go here</span>
 		</div>
 	</div>
+	-->
 </body>
 </html>
