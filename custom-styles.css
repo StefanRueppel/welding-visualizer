@@ -1,0 +1,16 @@
+.ui-content>.ui-block-a,
+.ui-content>.ui-block-b {
+	width: 100%;
+	float: none;
+}
+
+@media all and (min-width: 42em) {
+	.ui-content>.ui-block-a {
+		width: 66%;
+		float: left;
+	}
+	.ui-content>.ui-block-b {
+		width: 33%;
+		float: left;
+	}
+} 

@@ -4,6 +4,7 @@
 	<title>Welding Visualizer</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8"/>
+	<link rel="stylesheet" href="custom-styles.css"/>
 	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.css">
 	<script
 			  src="https://code.jquery.com/jquery-2.1.4.js"
@@ -30,10 +31,14 @@
 			<h1>Welding Visualizer</h1>
 		</div>
 		<div data-role="content">
-			<div id="graph-area">
-				<svg width="100%">
+			<div id="graph-area" class="ui-block-a">
+				<h2>Graph-Area</h2>
+				<svg width="100%" height="100%">
 
 				</svg>
+			</div>
+			<div id="mgmt-area" class="ui-block-b" style="background-color: red; height: 150px;">
+				<h2>Graph-Management</h2>
 			</div>
 		</div>
 		<div data-role="footer" data-position="fixed">
