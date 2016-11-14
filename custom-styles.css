@@ -1,18 +1,32 @@
+.ui-content {
+	overflow: auto;
+}
+
 .ui-content>.ui-block-a,
 .ui-content>.ui-block-b {
 	width: 100%;
 	float: none;
-	margin: 5px;
+	padding: 5px;
 	border: 1px #acacac solid;
+	vertical-align: top;
+	margin-bottom: 5px;
 }
 
 @media all and (min-width: 60em) {
 	.ui-content>.ui-block-a {
-		width: 65.5%;
-		float: left;
+		width: 66%;
+		display: inline-block;
 	}
 	.ui-content>.ui-block-b {
-		width: 32.5%;
-		float: left;
+		width: 33%;
+		display: inline-block;
 	}
 } 
+
+svg {
+
+}
+
+.datapoint {
+	fill: red;
+}
