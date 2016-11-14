@@ -8,6 +8,7 @@ Projekt-Repository für das Fach ITSuITP
 4. Dateien bearbeiten, hinzufügen, etc.
 5. [Änderungen pushen](https://guides.github.com/activities/forking/#making-changes).
 6. [Pull-Request erstellen](https://guides.github.com/activities/forking/#making-a-pull-request).
+
 ---------------------------------------
 ## Verwendete Programme und Bibliotheken
 ###Frontend
