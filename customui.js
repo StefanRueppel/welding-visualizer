@@ -20,10 +20,10 @@ function documentInit() {
                     return attr.attributeId === changedSelect.selectedIndex;
                 });
                 if (changedSelect === document.getElementById("xAxis-select")) {
-                    $("#yAxis-select").val(attributes[(attrIndex+1)%attributes.length]);
+                    $("#yAxis-select").val(attributes[(attrIndex+1)%attributes.length].attributeId);
                 }
                 else if (changedSelect === document.getElementById("yAxis-select")) {
-                    $("#xAxis-select").val(attributes[(attrIndex+1)%attributes.length]);
+                    $("#xAxis-select").val(attributes[(attrIndex+1)%attributes.length].attributeId);
                 }
                 $(".axis-select").change();
 
