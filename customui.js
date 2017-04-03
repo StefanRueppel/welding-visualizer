@@ -9,8 +9,8 @@ function documentInit() {
             }));
         }
         if (attributes.length >= 2) {
-            $("#xAxis-select").val(attributes[0].attributeId);
-            $("#yAxis-select").val(attributes[1].attributeId);
+            $("#xAxis-select").prop("selectedIndex", attributes[0].attributeId);
+            $("#yAxis-select").prop("selectedIndex", attributes[1].attributeId);
         }
         $(".axis-select").on("change", (changeEvent) => {
             if ($("#xAxis-select").val() === $("#yAxis-select").val()) {
