@@ -17,7 +17,7 @@ function documentInit() {
             if ($("#xAxis-select").val() === $("#yAxis-select").val()) {
                 let changedSelect = changeEvent.target;
                 let attrIndex = attributes.findIndex(function(attr) {
-                    return attr.attributeId === changedSelect.selectedIndex;
+                    return parseInt(attr.attributeId) === parseInt(changedSelect.selectedIndex);
                 });
                 if (changedSelect === document.getElementById("xAxis-select")) {
                     $("#yAxis-select").val(attributes[(attrIndex+1)%attributes.length].attributeId);
