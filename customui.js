@@ -2,12 +2,22 @@ $(document).ready(documentInit);
 
 function documentInit() {
     getAllMaterialAttributes().then(function(attributes) {
-        for (let attribute of attributes) {
+        for (let attr of attributes) {
             $(".axis-select").append($("<option>", {
-                value: attribute.attributeId,
-                text: attribute.name + "[" + attribute.unit + "]"
+                value: attr.attributeId,
+                text: attr.name + " [" + attr.unit + "]"
             }));
         }
+        if (attributes.length >= 2) {
+            $("#xAxis-select").val(attributes[0].attributeId);
+            $("#yAxis-select").val(attributes[1].attributeId);
+        }
+        $(".axis-select").on("change", (changeEvent) => {
+            if ($("#xAxis-select").val() === $("#yAxis-select").val()) {
+                alert("already taken");
+            }
+            //switch or go to next unused if already taken
+        });
     }, function(err) {
 
     });
