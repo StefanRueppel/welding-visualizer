@@ -9,15 +9,16 @@ function documentInit() {
             }));
         }
         if (attributes.length >= 2) {
+            //force change so JQM knows what happened
             $("#xAxis-select").prop("selectedIndex", attributes[0].attributeId).change();
             $("#yAxis-select").prop("selectedIndex", attributes[1].attributeId).change();
-            //$(".axis-select").selectmenu("refresh", true);
         }
         $(".axis-select").on("change", (changeEvent) => {
             if ($("#xAxis-select").val() === $("#yAxis-select").val()) {
-                alert("already taken");
+                let tmp = $("#xAxis-select").val();
+                $("#xAxis-select").val($("#yAxis-select").val()).change();
+                $("#yAxis-select").val(tmp).change();
             }
-            //switch or go to next unused if already taken
         });
     }, function(err) {
 
