@@ -11,6 +11,7 @@ function documentInit() {
         if (attributes.length >= 2) {
             $("#xAxis-select").prop("selectedIndex", attributes[0].attributeId);
             $("#yAxis-select").prop("selectedIndex", attributes[1].attributeId);
+            $(".axis-select").selectmenu("refresh", true);
         }
         $(".axis-select").on("change", (changeEvent) => {
             if ($("#xAxis-select").val() === $("#yAxis-select").val()) {
