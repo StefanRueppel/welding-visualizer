@@ -15,10 +15,18 @@ function documentInit() {
         }
         $(".axis-select").on("change", (changeEvent) => {
             if ($("#xAxis-select").val() === $("#yAxis-select").val()) {
-                let tmp = $("#xAxis-select").val();
-                $("#xAxis-select").prop("selectedIndex", $("#yAxis-select").val());
-                $("#yAxis-select").prop("selectedIndex", tmp);
+                let changedSelect = changeEvent.target;
+                let attrIndex = attributes.findIndex(function(attr) {
+                    return attr.attributeId === changedSelect.selectedIndex;
+                });
+                if (changedSelect === document.getElementById("xAxis-select")) {
+                    $("#yAxis-select").val(attributes[(attrIndex+1)%attributes.length]);
+                }
+                else if (changedSelect === document.getElementById("yAxis-select")) {
+                    $("#xAxis-select").val(attributes[(attrIndex+1)%attributes.length]);
+                }
                 $(".axis-select").change();
+
             }
         });
     }, function(err) {
