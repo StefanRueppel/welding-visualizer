@@ -5,7 +5,7 @@ function documentInit() {
         for (let attribute of attributes) {
             $(".axis-select").append($("<option>"), {
                 value: attribute.attributeId,
-                text: attribute.attribute.name + "[" + attribute.unit + "]"
+                text: attribute.name + "[" + attribute.unit + "]"
             });
         }
     }, function(err) {
