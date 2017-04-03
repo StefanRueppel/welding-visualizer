@@ -16,19 +16,7 @@
 </head>
 <body>
 	<div data-role="page" class="ui-responsive-panel" id="home">
-		<!--
-		<div data-role="panel" id="nav-panel">
-			<ul data-role="listview">
-			<li data-icon="delete"><a href="#" data-rel="close">Close menu</a></li>
-			<li data-icon="home"><a href="#home">Home</a></li>
-			<li data-icon="gear"><a href="#settings">Settings</a></li>
-			</ul>
-		</div><!-- /panel -->
 		<div data-role="header" data-position="fixed">
-			<!--<a href="#nav-panel" data-icon="bars" data-iconpos="notext">Menu</a>-->
-			<!--
-			<a id="btn-back" href="<?php echo $_SERVER['HTTP_REFERER'];?>" data-icon="back" data-rel="back">Back</a>-->
-
 			<h1>Welding Visualizer</h1>			
 			<a href="https://github.com/heimmat/welding-visualizer" data-icon="eye" class="ui-btn-right">View Code on GitHub</a>
 		</div>
@@ -41,21 +29,17 @@
 			</div>
 			<div id="mgmt-area" class="ui-block-b">
 				<h2>Graph-Management</h2>
+				<label for="xAxis-select">X-Achse</label>
+				<select id="xAxis-select">
+				</select>
+				<label for="yAxis-select">Y-Achse</label>
+				<select id="yAxis-select">
+				</select>
 			</div>
 		</div>
 		<div data-role="footer" data-position="fixed">
 			<h1>Ein Projekt der Fachhochschule Südwestfalen Meschede im Fach IT-Systeme und IT-Projekte</h1>
 		</div>
 	</div>
-	<!--
-	<div data-role="page" id="settings">
-		<div data-role="header" data-position="fixed">
-			<h1>Settings</h1>
-		</div>
-		<div data-role="content">
-			<span>Settings go here</span>
-		</div>
-	</div>
-	-->
 </body>
 </html>
