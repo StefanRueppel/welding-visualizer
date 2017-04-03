@@ -16,8 +16,8 @@ function documentInit() {
         $(".axis-select").on("change", (changeEvent) => {
             if ($("#xAxis-select").val() === $("#yAxis-select").val()) {
                 let tmp = $("#xAxis-select").val();
-                $("#xAxis-select").val($("#yAxis-select").val()).change();
-                $("#yAxis-select").val(tmp).change();
+                $("#xAxis-select").prop("selectedIndex", $("#yAxis-select").val()).change();
+                $("#yAxis-select").prop("selectedIndex", tmp).change();
             }
         });
     }, function(err) {
