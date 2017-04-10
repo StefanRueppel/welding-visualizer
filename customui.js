@@ -25,11 +25,12 @@ function documentInit() {
                 else if (changedSelect === document.getElementById("yAxis-select")) {
                     $("#xAxis-select").val(attributes[(attrIndex+1)%attributes.length].attributeId);
                 }
+                //retrigger change event for JQM
                 $(".axis-select").change();
 
             }
         });
     }, function(err) {
-
+        console.error(err);
     });
 }
