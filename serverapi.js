@@ -2,8 +2,18 @@ function getAllMaterialAttributes() {
     return new Promise(function(resolve, reject) {
         let xhr = new XMLHttpRequest();
         xhr.onload = (evt) => resolve(JSON.parse(evt.target.responseText));
-        xhr.onerror = () => reject("Error in server connection");
+        xhr.onerror = () => reject("Error while contacting server");
         xhr.open("GET", "attributes.php");
+        xhr.send();
+    });
+}
+
+function getMaterialsWithAttributes(xAxisAttribute, yAxisAttribute) {
+    return new Promise(function(resolve, reject) {
+        let xhr = new XMLHttpRequest();
+        xhr.onload() = (evt) => resolve(JSON.parse(evt.target.responseText));
+        xhr.onerror = () => reject("Error while contacting server");
+        xhr.open("GET", "materials.php?xattr=" + xAxisAttribute + "&yattr=" + yAxisAttribute);
         xhr.send();
     });
 }
