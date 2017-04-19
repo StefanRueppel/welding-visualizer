@@ -13,7 +13,7 @@ function getMaterialsWithAttributes(xAxisAttribute, yAxisAttribute) {
         let xhr = new XMLHttpRequest();
         xhr.onload = (evt) => resolve(JSON.parse(evt.target.responseText));
         xhr.onerror = () => reject("Error while contacting server");
-        xhr.open("GET", "materials.php?xattr=" + xAxisAttribute + "&yattr=" + yAxisAttribute);
+        xhr.open("GET", "materials.php?xattr=" + encodeURIComponent(xAxisAttribute) + "&yattr=" + encodeURIComponent(yAxisAttribute));
         xhr.send();
     });
 }
