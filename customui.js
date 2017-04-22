@@ -27,7 +27,7 @@ function documentInit() {
                 }
                 //retrigger change event for JQM
                 $(".axis-select").change();
-                getMaterialsWithAttributes($("#xAxis-select").val(), $("yAxis-select").val()).then(function(materials) {
+                getMaterialsWithAttributes($("#xAxis-select").val(), $("#yAxis-select").val()).then(function(materials) {
                     //draw
                     console.log(materials);
                 }, function(err) {
