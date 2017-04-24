@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welding Visualizer</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" href="custom-styles.css"/>
+	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.css">
+	<script
+			  src="https://code.jquery.com/jquery-2.1.4.js"
+			  integrity="sha256-siFczlgw4jULnUICcdm9gjQPZkw/YPDqhQ9+nAOScE4="
+			  crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.js"></script>
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+	<!--<script src="prototype.js"></script>-->
+	<script src="serverapi.js"></script>
+	<script src="customui.js"></script>
+</head>
+<body>
+	<div data-role="page" class="ui-responsive-panel" id="home">
+		<div data-role="header" data-position="fixed">
+			<h1>Welding Visualizer</h1>			
+			<a href="https://github.com/heimmat/welding-visualizer" data-icon="eye" class="ui-btn-right">View Code on GitHub</a>
+		</div>
+		<div data-role="content">
+			<div id="graph-area" class="ui-block-a">
+				<h2>Graph-Area</h2>
+				<svg>
+
+				</svg>
+			</div>
+			<div id="mgmt-area" class="ui-block-b">
+				<h2>Management-Area</h2>
+				<a class="ui-btn" data-rel="popup" data-position-to="window" data-transition="pop" href="#axes-mgmt">Achsen-Management</a>
+				<div data-role="popup" id="axes-mgmt" class="ui-content">
+					<a data-rel="back" class="ui-btn ui-btn-right ui-icon-delete ui-corner-all ui-shadow ui-btn-icon-notext">Close</a>
+					<label for="xAxis-select">X-Achse</label>
+					<select id="xAxis-select" class="axis-select">
+					</select>
+					<label for="yAxis-select">Y-Achse</label>
+					<select id="yAxis-select" class="axis-select">
+					</select>
+				</div>
+			</div>
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<h1>Ein Projekt der Fachhochschule Südwestfalen Meschede im Fach IT-Systeme und IT-Projekte</h1>
+		</div>
+	</div>
+	
+</body>
+</html>

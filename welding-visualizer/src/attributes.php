@@ -1,0 +1,1 @@
+[{"attributeId": "0", "name": "Breite", "unit": "cm"},{"attributeId": "1", "name": "Höhe", "unit": "mm"}]
